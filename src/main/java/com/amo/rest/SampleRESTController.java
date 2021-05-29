@@ -2,14 +2,14 @@ package com.amo.rest;
 
 import com.amo.database.ConnectionManager;
 import com.amo.database.SampleAccessor;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class SampleRESTController {
 
-    @GetMapping("/hello")
+    @PostMapping("/hello")
     public SampleResponse greeting(@RequestBody SampleRequest req) {
         SampleAccessor a = new SampleAccessor(ConnectionManager.getConnection());
         int generatedId = a.insert(req.name);
