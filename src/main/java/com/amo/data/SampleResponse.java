@@ -1,4 +1,4 @@
-package com.amo.rest;
+package com.amo.data;
 
 public class SampleResponse {
 
